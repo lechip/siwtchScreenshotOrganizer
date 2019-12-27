@@ -5,7 +5,7 @@ This is a simple node cli tool that recursively copies the files of the `/Album`
 Usage:
 
 ```bash
-node index.js -i "input"
+node index.js -i "F:\lechip\Downloads\Album\2019" -o "F:\lechip\Downloads\Album"
 Attempting to organize Sreenshots in ./AlbumC
 Reading 996 files
 Processed 996 files.
