@@ -17,3 +17,4 @@ Processed 996 files.
 - [ ] Tests?
 - [ ] Make a dry-run option
 - [ ] Open-Source
+- [ ] Publish on NPM
