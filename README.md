@@ -5,7 +5,8 @@ This is a simple node cli tool that recursively copies the files of the `/Album`
 Usage:
 
 ```bash
-node index.js -i "D:\lechip\Downloads\Album" -o "D:\lechip\Downloads\output"
+node index.js -i "E:\Nintendo\Album" -o "D:\lechip\Downloads\output" # input is the "Album" folder of the SD card
+# node index.js -i "D:\lechip\Downloads\Album" -o "D:\lechip\Downloads\output" # Alternative if copyied to disk
 Attempting to organize Sreenshots in ./AlbumC
 Reading 996 files
 Processed 996 files.
