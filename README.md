@@ -1,6 +1,6 @@
 # NINTENDO SWITCH SCREENSHOT PROCESSOR
 
-This is a simple node cli tool that recursively copies the files of the `/Album` folder of the Nintendo Switch SD card and outputs a `/screenshotsOutput` with folders for each game and with the screenshots withtin each corresponding game.
+This is a simple node CLI tool that recursively copies the `jpg` and `mp4` files of the `/Album` folder of the Nintendo Switch SD card and outputs it in the chosen output folder an collection of folders for each game and with the media files withtin each corresponding game.
 
 Usage:
 
