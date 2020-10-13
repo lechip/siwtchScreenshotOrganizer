@@ -17,5 +17,6 @@ Processed 996 files.
 - [ ] Check what happens with directories that already have folders
 - [ ] Tests?
 - [ ] Make a dry-run option
+- [ ] Rename to "Nintendo Switch Media Exporter"
 - [ ] Open-Source
 - [ ] Publish on NPM
