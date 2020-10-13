@@ -3,22 +3,22 @@ const fs = require("fs");
 const glob = require("glob");
 const util = require("util");
 const globPromise = util.promisify(glob);
-const REGEX_PATTERN = "-(.*).jpg";
+// const REGEX_PATTERN = "-(.*).jpg";
+const REGEX_PATTERN = "-(.*).(jpg|mp4)";
 
 const argv = yargs
   .option("inputDir", {
     alias: "i",
     demandOption: true,
-    describe: "input directory for the screenshots"
+    describe: "input directory for the screenshots",
   })
   .option("outputDir", {
     alias: "o",
     describe: "output directory for the screenshots",
-    default: "./screenshotsOutput"
+    default: "./screenshotsOutput",
   }).argv;
 
 async function main(argv) {
-  // read all the files
   const regexPattern = new RegExp(REGEX_PATTERN);
   const inputDir = argv.inputDir;
   const outputDir = argv.outputDir;
@@ -37,11 +37,12 @@ async function main(argv) {
     if (error.code !== "EEXIST") throw error;
   }
   try {
-    const files = await globPromise(`${inputDir}/**/*.jpg`);
+    // read all the files
+    const files = await globPromise(`${inputDir}/**/*.{jpg,mp4}`);
     console.log(`Reading ${files.length} files`);
     // make a map of the possible directories
     const dirSet = new Set();
-    files.map(file => {
+    files.map((file) => {
       // do regex match
       const gameCode = regexPattern.exec(file)[1]; // The second element of the array is the capture group
       // Check if element in set already
